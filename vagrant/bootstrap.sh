@@ -35,7 +35,7 @@ sudo pecl install memcache
 echo "extension=memcache.so" | sudo tee /etc/php5/apache2/conf.d/memcache.ini
 
 # Project Auto Installer
-. /vagrant/app/drupal/7/config/vagrant-d7-installer.sh
+. /vagrant/app/drupal/8/config/vagrant-d8-installer.sh
 
 # Restart services
 sudo /etc/init.d/apache2 restart -y

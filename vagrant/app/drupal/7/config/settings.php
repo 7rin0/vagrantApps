@@ -1,5 +1,15 @@
 <?php
 
+    /**
+     * ONLY FOR DEV ENVIRONMENTS
+     * DO NOT USE THIS IN PRODUCTION
+     * ONLY FOR DEV ENVIRONMENTS
+     * DO NOT USE THIS IN PRODUCTION
+     * ONLY FOR DEV ENVIRONMENTS
+     * DO NOT USE THIS IN PRODUCTION
+     * ONLY FOR DEV ENVIRONMENTS
+     */
+
 /**
  * @file
  * Drupal site-specific configuration file.
