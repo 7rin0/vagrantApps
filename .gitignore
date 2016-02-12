@@ -1,5 +1,8 @@
 # Ignore all to allow git cloned projects being installed
-/vagrant/app
+/vagrant/app/wordpress
+/vagrant/app/drupal
+/vagrant/app/symfony
+/vagrant/app/sonata
 
 # Ignore PHPStorm files
 .idea
