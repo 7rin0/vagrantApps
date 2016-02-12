@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # No interactive settings
-sudo cp -f /vagrant/configs/grub /etc/default/grub
+sudo cp -f /vagrant/config/grub /etc/default/grub
 sudo update-grub
 
 # Default variables to no interaction installations
