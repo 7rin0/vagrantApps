@@ -13,7 +13,6 @@ sudo sed -i '/tty/!s/mesg n/tty -s \\&\\& mesg n/' /root/.profile
 sudo DEBIAN_FRONTEND=noninteractive apt-get -f install -y
 sudo DEBIAN_FRONTEND=noninteractive apt-get update -y
 sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
-sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
 
 # Install LAMP
 sudo DEBIAN_FRONTEND=noninteractive apt-get install apache2 -y
