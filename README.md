@@ -4,7 +4,7 @@
 
 #### git clone https://github.com/7rin0/vagrantApps.git
 
-#### cd drupal8Explorer/vagrant
+#### cd vagrantApps/vagrant
 
 #### vagrant up
 
