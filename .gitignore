@@ -1,0 +1,11 @@
+# Ignore all to allow git cloned projects being installed
+/vagrant/app
+
+# Ignore PHPStorm files
+.idea
+
+# Ignore Vagrant install
+/vagrant/.vagrant
+
+# Ignore nohup file
+nohup.out
