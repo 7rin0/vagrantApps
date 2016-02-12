@@ -1,8 +1,8 @@
-# Vagrant VM ready for Drupal 8
+# Vagrant VM ready for PHP Applications
 
 ## Quick steps
 
-#### https://github.com/7rin0/drupal8Explorer.git
+#### https://github.com/7rin0/vagrantApps.git
 
 #### cd drupal8Explorer/vagrant
 
