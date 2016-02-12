@@ -13,7 +13,6 @@ sudo sed -i '/tty/!s/mesg n/tty -s \\&\\& mesg n/' /root/.profile
 sudo DEBIAN_FRONTEND=noninteractive apt-get -f install -y
 sudo DEBIAN_FRONTEND=noninteractive apt-get update -y
 sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
-sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
 
 # Install LAMP
 sudo DEBIAN_FRONTEND=noninteractive apt-get install apache2 -y
@@ -35,19 +34,8 @@ sudo apt-get install php5-memcache memcached php-pear -y
 sudo pecl install memcache
 echo "extension=memcache.so" | sudo tee /etc/php5/apache2/conf.d/memcache.ini
 
-# Install Drush and Setup a Drupal 8 project
-sudo DEBIAN_FRONTEND=noninteractive apt-get install drush -y
-sudo drush dl drupal-8 --destination=/vagrant/app/drupal --drupal-project-rename="8" -y
-sudo mysql -u root -proot -h localhost -e'create database d8sandbox'
-sudo mkdir -p /vagrant/app/drupal/8/sites/default/files
-sudo mkdir -p /vagrant/app/drupal/8/sites/default/files/translations
-sudo chmod -R 777 /vagrant/app/drupal/8/sites/default/files
-cd /vagrant/app/drupal/8 && sudo composer install --no-interaction --prefer-source
-
-# Update vhost
-sudo cp -f /vagrant/configs/settings.php /vagrant/app/drupal/8/sites/default/settings.php
-sudo cp -f /vagrant/configs/000-default.conf /etc/apache2/sites-available/000-default.conf
-sudo ln -nsf /vagrant/app/drupal/8 ~/
+# Project Auto Installer
+. /vagrant/app/drupal/7/config/vagrant-d7-installer.sh
 
 # Restart services
 sudo /etc/init.d/apache2 restart -y
