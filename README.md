@@ -31,6 +31,6 @@ Choose a prefered directory to work and lets get started!
 ## Project URL
 Open in your browser the defined URL to your application type
 
-For a Drupal 8 application the url is drupal-8.vm
+For a Drupal 8 application the url is http://drupal-8.vm
 
 ## Enjoy!
