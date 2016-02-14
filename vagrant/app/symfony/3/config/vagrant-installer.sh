@@ -3,7 +3,8 @@
 # Install Drush and Setup a Symfony 3 project
 sudo curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony
 sudo chmod a+x /usr/local/bin/symfony
-cd /vagrant/app/symfony/3 && sudo rm -rf current && symfony new current 3.0
+cd /vagrant/app/symfony/3 && symfony new current 3.0
+sudo cp -f /vagrant/app/symfony/3/config/parameters.yml /vagrant/app/symfony/3/current/app/config/parameters.yml
 sudo mysql -u root -proot -h localhost -e'create database symfony_3'
 sudo chmod -R 777 /vagrant/app/symfony/3/current/app/cache
 sudo chmod -R 777 /vagrant/app/symfony/3/current/app/logs
