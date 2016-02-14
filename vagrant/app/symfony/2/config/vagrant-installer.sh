@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Install Drush and Setup a Symfony 2 project
+# Setup a Symfony 2 project
 sudo curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony
 sudo chmod a+x /usr/local/bin/symfony
 cd /vagrant/app/symfony/2 && symfony new current 2.8

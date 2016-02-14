@@ -4,7 +4,7 @@
 /vagrant/app/drupal/8/current
 /vagrant/app/symfony/2/current
 /vagrant/app/symfony/3/current
-/vagrant/app/sonata/current
+/vagrant/app/symfony/sonata/current
 
 # Ignore PHPStorm files
 .idea

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Install Drush and Setup a Symfony 3 project
+# Setup a Symfony 3 project
 sudo curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony
 sudo chmod a+x /usr/local/bin/symfony
 cd /vagrant/app/symfony/3 && symfony new current 3.0
