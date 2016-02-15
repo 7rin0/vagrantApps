@@ -3,7 +3,7 @@ Install and run one or more applications automatically
 
 ## Requirements
 Your OS must have this application installed
-- Virtuabox
+- Virtualbox
 - Vagrant
 - Git
 
@@ -15,22 +15,18 @@ Unix, Unix-like, POSIX */etc/hosts*, Windows: *%SystemRoot%\System32\drivers\etc
 - 192.168.75.57   drupal-7.vm drupal-8.vm
 - 192.168.75.57   symfony-2.vm sonata.vm symfony-3.vm
 
-## Application branch
-Select from github or command-line (git branch -r --list) the name of the branch related to your application type
-
-For a Drupal 8 application the branch is: drupal-8
+## Choosen Application
+Modify your ./vagrant/bootstrap.sh file and uncomment at "Project Auto Installer" the vagrant-installers you need. Each line includes different settings required by each project.
+For a Drupal 8 application uncomment ". /vagrant/app/drupal/8/config/vagrant-installer.sh"
 
 ## Install vagrantApps
 Choose a preferred directory to work and lets get started!
 - git clone https://github.com/7rin0/vagrantApps.git
-- git checkout *{application-branch}*
 - cd vagrantApps/vagrant
 - vagrant up
 
-
 ## Project URL
-Open in your browser the defined URL for your application type
-
-For a Drupal 8 application the url is http://drupal-8.vm
+Open in your browser the defined URL for your application
+For a Drupal 8 application the url is http://drupal-8.vm/core/install.php
 
 ## Enjoy!
