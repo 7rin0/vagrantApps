@@ -9,7 +9,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	config.vm.box = "ubuntu/trusty64"
 
 	# Update manually
-	config.vm.box_check_update = false
+	#if File.exist?("./vagrant/.vagrant") then
+		#config.vm.box_check_update = false
+	#end
 
 	# The url from where the 'config.vm.box' box will be fetched if it
 	# doesn't already exist on the user's system.
