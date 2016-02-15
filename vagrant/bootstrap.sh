@@ -34,11 +34,23 @@ sudo apt-get install php5-memcache memcached php-pear -y
 sudo pecl install memcache
 echo "extension=memcache.so" | sudo tee /etc/php5/apache2/conf.d/memcache.ini
 
-# Project Auto Installer
+### Project Auto Installer ###
+### Project Auto Installer ###
+### Project Auto Installer ###
+
+# Uncomment next line to Install Drupal 7
 #. /vagrant/app/drupal/7/config/vagrant-installer.sh
+
+# Uncomment next line to Install Drupal 8
 . /vagrant/app/drupal/8/config/vagrant-installer.sh
+
+# Uncomment next line to Install Symfony 2
 #. /vagrant/app/symfony/2/config/vagrant-installer.sh
+
+# Uncomment next line to Install Symfony 3
 #. /vagrant/app/symfony/3/config/vagrant-installer.sh
+
+# Uncomment next line to Install Sonata
 #. /vagrant/app/symfony/sonata/config/vagrant-installer.sh
 
 # Restart services
