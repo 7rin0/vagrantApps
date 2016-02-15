@@ -3,7 +3,7 @@ Install and run one or more applications automatically
 
 ## Requirements
 Your OS must have this application installed
-- Virtuabox
+- Virtualbox
 - Vagrant
 - Git
 
