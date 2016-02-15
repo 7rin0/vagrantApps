@@ -16,7 +16,7 @@ Unix, Unix-like, POSIX */etc/hosts*, Windows: *%SystemRoot%\System32\drivers\etc
 - 192.168.75.57   symfony-2.vm sonata.vm symfony-3.vm
 
 ## Choosen Application
-Modify your ./vagrant/bootstrap.sh file and uncomment at "Project Auto Installer" de vagrant-installers you need
+Modify your ./vagrant/bootstrap.sh file and uncomment at "Project Auto Installer" the vagrant-installers you need. Each line includes different settings required by each project.
 For a Drupal 8 application uncomment ". /vagrant/app/drupal/8/config/vagrant-installer.sh"
 
 ## Install vagrantApps
