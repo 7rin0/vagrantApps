@@ -21,3 +21,4 @@ sudo cp -f /vagrant/app/drupal/7/config/settings.php /vagrant/app/drupal/7/curre
 sudo cp -f /vagrant/app/drupal/7/config/drupal_7.conf /etc/apache2/sites-available/drupal_7.conf
 sudo sed -i -e '1 i\ 127.0.0.1 drupal-7.vm ' /etc/hosts
 sudo a2ensite drupal_7
+sudo service apache2 restart -y
