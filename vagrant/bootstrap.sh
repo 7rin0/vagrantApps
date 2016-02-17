@@ -29,7 +29,8 @@ sudo apt-get install pdo-mysql -y
 sudo a2enmod rewrite
 sudo service apache2 restart -y
 
-# Install Environment
+# Prepare Environment
+sudo apt-get install zip
 sudo DEBIAN_FRONTEND=noninteractive apt-get install git -y
 sudo curl -sS https://getcomposer.org/installer | php && sudo mv composer.phar /usr/bin/composer
 sudo composer config -g github-oauth.github.com f0502ecd3d7c8e7e47223616c177b869180a3e05
@@ -56,6 +57,9 @@ echo "extension=memcache.so" | sudo tee /etc/php5/apache2/conf.d/memcache.ini
 
 # Uncomment next line to Install Sonata
 #. /vagrant/app/symfony/sonata/config/vagrant-installer.sh
+
+# Uncomment next line to Install Wordpress 4
+. /vagrant/app/wordpress/4/config/vagrant-installer.sh
 
 # Restart services
 sudo /etc/init.d/apache2 restart -y

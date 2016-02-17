@@ -1,10 +1,18 @@
-# Ignore all to allow git cloned projects being installed
+# Ignore project current folders
 /vagrant/app/wordpress/4/current
 /vagrant/app/drupal/7/current
 /vagrant/app/drupal/8/current
 /vagrant/app/symfony/2/current
 /vagrant/app/symfony/3/current
 /vagrant/app/symfony/sonata/current
+
+# Ignore project releases folders
+/vagrant/app/wordpress/4/releases
+/vagrant/app/drupal/7/releases
+/vagrant/app/drupal/8/releases
+/vagrant/app/symfony/2/releases
+/vagrant/app/symfony/3/releases
+/vagrant/app/symfony/sonata/releases
 
 # Ignore PHPStorm files
 .idea
