@@ -44,22 +44,25 @@ echo "extension=memcache.so" | sudo tee /etc/php5/apache2/conf.d/memcache.ini
 ## Comment vagrant-installer to disable instalation of the relative application
 
 # Uncomment next line to Install Drupal 7
-#. /vagrant/app/drupal/7/config/vagrant-installer.sh
-#
-## Uncomment next line to Install Drupal 8
-#. /vagrant/app/drupal/8/config/vagrant-installer.sh
-#
-## Uncomment next line to Install Symfony 2
-#. /vagrant/app/symfony/2/config/vagrant-installer.sh
-#
-## Uncomment next line to Install Symfony 3
-#. /vagrant/app/symfony/3/config/vagrant-installer.sh
-#
-## Uncomment next line to Install Sonata
-. /vagrant/app/symfony/sonata/config/vagrant-installer.sh
+. /vagrant/app/drupal/7/config/vagrant-installer.sh
+
+# Uncomment next line to Install Drupal 8
+. /vagrant/app/drupal/8/config/vagrant-installer.sh
+
+# Uncomment next line to Install Symfony 2
+. /vagrant/app/symfony/2/config/vagrant-installer.sh
+
+# Uncomment next line to Install Symfony 3
+. /vagrant/app/symfony/3/config/vagrant-installer.sh
+
+# Uncomment next line to Install Sonata
+#. /vagrant/app/symfony/sonata/config/vagrant-installer.sh
 #
 ## Uncomment next line to Install Wordpress 4
-#. /vagrant/app/wordpress/4/config/vagrant-installer.sh
+. /vagrant/app/wordpress/4/config/vagrant-installer.sh
+
+# Uncomment next line to Install Seven Manager (custom project)
+#. /vagrant/app/custom/seven_manager/config/vagrant-installer.sh
 
 # Restart services
 sudo /etc/init.d/apache2 restart -y
