@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Generate releases
+cd /vagrant/app/drupal/8
+mkdir releases && mv current releases/d8_$(date +%F-%T)
+
 # Install Drush
 if ! [ -f /usr/local/bin/drush ]
 then
@@ -19,6 +23,5 @@ sudo chmod -R 777 /vagrant/app/drupal/8/current/sites/default/files
 sudo cp -f /vagrant/app/drupal/8/config/settings.php /vagrant/app/drupal/8/current/sites/default/settings.php
 sudo drush site-install standard --db-url='mysql://root:root@localhost/drupal_8' --account-name='admin' --account-pass='admin' --site-name='Drupal 8' -y
 sudo cp -f /vagrant/app/drupal/8/config/drupal_8.conf /etc/apache2/sites-available/drupal_8.conf
-sudo sed -i -e '1 i\ 127.0.0.1 drupal-8.vm ' /etc/hosts
 sudo a2ensite drupal_8
 sudo service apache2 restart -y

@@ -21,5 +21,4 @@ php app/console assetic:dump
 
 # Set params
 sudo cp -f /vagrant/app/custom/seven_manager/config/seven_manager.conf /etc/apache2/sites-available/seven_manager.conf
-sudo sed -i -e '1 i\ 127.0.0.1 seven_manager.vm ' /etc/hosts
 sudo a2ensite seven_manager

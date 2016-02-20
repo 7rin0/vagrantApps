@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Generate releases
+cd /vagrant/app/symfony/3
+mkdir releases && mv current releases/sf3_$(date +%F-%T)
+
 # Setup a Symfony 3 project
 sudo curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony
 sudo chmod a+x /usr/local/bin/symfony
@@ -12,6 +16,5 @@ sudo sed -i "s/'127.0.0.1'/'127.0.0.1', '192.168.75.1'/g" /vagrant/app/symfony/3
 
 # Set params
 sudo cp -f /vagrant/app/symfony/3/config/symfony_3.conf /etc/apache2/sites-available/symfony_3.conf
-sudo sed -i -e '1 i\ 127.0.0.1 symfony-3.vm ' /etc/hosts
 sudo a2ensite symfony_3
 sudo service apache2 restart -y

@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Generate releases
+cd /vagrant/app/drupal/7
+mkdir releases && mv current releases/d7_$(date +%F-%T)
+
 # Install Drush
 if ! [ -f /usr/local/bin/drush ]
 then
@@ -19,6 +23,5 @@ sudo chmod -R 777 /vagrant/app/drupal/7/current/sites/default/files
 sudo drush site-install standard --db-url='mysql://root:root@localhost/drupal_7' --account-name='admin' --account-pass='admin' --site-name='Drupal 7' -y
 sudo cp -f /vagrant/app/drupal/7/config/settings.php /vagrant/app/drupal/7/current/sites/default/settings.php
 sudo cp -f /vagrant/app/drupal/7/config/drupal_7.conf /etc/apache2/sites-available/drupal_7.conf
-sudo sed -i -e '1 i\ 127.0.0.1 drupal-7.vm ' /etc/hosts
 sudo a2ensite drupal_7
 sudo service apache2 restart -y

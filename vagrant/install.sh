@@ -18,6 +18,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
 sudo DEBIAN_FRONTEND=noninteractive apt-get install apache2 -y
 sudo sed -i -e '1 i\ ServerName localhost ' /etc/apache2/apache2.conf
 sudo DEBIAN_FRONTEND=noninteractive apt-get install mysql-server -y
+sudo apt-get install php5 -y
 sudo apt-get install php5 libapache2-mod-php5 -y
 sudo apt-get install php5-dev -y
 sudo apt-get install php5-mcrypt -y
@@ -42,27 +43,29 @@ echo "extension=memcache.so" | sudo tee /etc/php5/apache2/conf.d/memcache.ini
 
 ### Project Auto Installer ###
 ## Comment vagrant-installer to disable instalation of the relative application
+## Add all possible hosts to machine to avoid duplications
+sudo cat config/hosts/hosts >> /etc/hosts
 
-# Uncomment next line to Install Drupal 7
-. /vagrant/app/drupal/7/config/vagrant-installer.sh
+# Comment next line to avoid last Drupal 7 installation
+. /vagrant/app/drupal/7/config/requirements.sh
 
-# Uncomment next line to Install Drupal 8
-. /vagrant/app/drupal/8/config/vagrant-installer.sh
+# Comment next line to avoid last Drupal 8 installation
+. /vagrant/app/drupal/8/config/requirements.sh
 
-# Uncomment next line to Install Symfony 2
-. /vagrant/app/symfony/2/config/vagrant-installer.sh
+# Comment next line to avoid last Symfony 2 installation
+. /vagrant/app/symfony/2/config/requirements.sh
 
-# Uncomment next line to Install Symfony 3
-. /vagrant/app/symfony/3/config/vagrant-installer.sh
+# Comment next line to avoid last Symfony 3 installation
+. /vagrant/app/symfony/3/config/requirements.sh
 
-# Uncomment next line to Install Sonata
-#. /vagrant/app/symfony/sonata/config/vagrant-installer.sh
+# Comment next line to avoid last Sonata installation
+#. /vagrant/app/symfony/sonata/config/requirements.sh
 #
-## Uncomment next line to Install Wordpress 4
-. /vagrant/app/wordpress/4/config/vagrant-installer.sh
+## Comment next line to avoid last Wordpress 4 installation
+. /vagrant/app/wordpress/4/config/requirements.sh
 
-# Uncomment next line to Install Seven Manager (custom project)
-#. /vagrant/app/custom/seven_manager/config/vagrant-installer.sh
+# Comment next line to avoid last Seven Manager (custom project) installation
+#. /vagrant/app/custom/seven_manager/config/requirements.sh
 
 # Restart services
 sudo /etc/init.d/apache2 restart -y

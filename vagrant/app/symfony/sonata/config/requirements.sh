@@ -1,9 +1,10 @@
 #!/bin/bash
 
-# Setup a Sonata/Symfony CMF project
+# Generate releases
 cd /vagrant/app/symfony/sonata
-mkdir releases
-mv current releases/sonata_$(date +%F-%T)
+mkdir releases && mv current releases/sonata_$(date +%F-%T)
+
+# Setup a Sonata/Symfony CMF project
 sudo DATABASE_NAME=sonata DATABASE_USER=root DATABASE_PASSWORD="root" COMPOSER_PROCESS_TIMEOUT=600 composer create-project sonata-project/sandbox:2.3.x-dev current
 #sudo cp -f /vagrant/app/symfony/sonata/config/parameters.yml /vagrant/app/symfony/sonata/current/app/config/parameters.yml
 sudo mysql -u root -proot -h localhost -e'create database sonata'
@@ -21,5 +22,4 @@ php app/console fos:user:create --super-admin admin admin@domain.com admin
 
 # Set params
 sudo cp -f /vagrant/app/symfony/sonata/config/sonata.conf /etc/apache2/sites-available/sonata.conf
-sudo sed -i -e '1 i\ 127.0.0.1 sonata.vm ' /etc/hosts
 sudo a2ensite sonata
