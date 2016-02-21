@@ -2,7 +2,8 @@
 
 # Generate releases
 cd /vagrant/app/symfony/3
-mkdir releases && mv current releases/sf3_$(date +%F-%T)
+mkdir releases
+mv current releases/sf3_$(date +%F-%T)
 
 # Setup a Symfony 3 project
 sudo curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony

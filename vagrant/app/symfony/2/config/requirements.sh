@@ -2,7 +2,8 @@
 
 # Generate releases
 cd /vagrant/app/symfony/2
-mkdir releases && mv current releases/sf2_$(date +%F-%T)
+mkdir releases
+mv current releases/sf2_$(date +%F-%T)
 
 # Setup a Symfony 2 project
 sudo curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony

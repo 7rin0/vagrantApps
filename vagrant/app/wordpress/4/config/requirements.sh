@@ -2,7 +2,8 @@
 
 # Generate releases
 cd /vagrant/app/wordpress/4
-mkdir releases && mv current releases/wp4_$(date +%F-%T)
+mkdir releases
+current releases/wp4_$(date +%F-%T)
 
 # Setup a Wordpress 4 project
 sudo wget https://wordpress.org/latest.zip -O current.zip && unzip current.zip && mv wordpress current && rm -rf current.zip

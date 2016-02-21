@@ -8,6 +8,7 @@
 /vagrant/app/custom/seven_manager/current
 
 # Ignore project releases folders
+/vagrant/app/wordpress/4/wordpress
 /vagrant/app/wordpress/4/releases
 /vagrant/app/drupal/7/releases
 /vagrant/app/drupal/8/releases
@@ -18,6 +19,7 @@
 
 # Ignore PHPStorm files
 .idea
+*.zip
 
 # Ignore Vagrant install
 /vagrant/.vagrant

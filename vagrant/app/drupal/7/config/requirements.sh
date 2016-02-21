@@ -2,7 +2,8 @@
 
 # Generate releases
 cd /vagrant/app/drupal/7
-mkdir releases && mv current releases/d7_$(date +%F-%T)
+mkdir releases
+mv current releases/d7_$(date +%F-%T)
 
 # Install Drush
 if ! [ -f /usr/local/bin/drush ]

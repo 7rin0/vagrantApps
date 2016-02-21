@@ -44,7 +44,7 @@ echo "extension=memcache.so" | sudo tee /etc/php5/apache2/conf.d/memcache.ini
 ### Project Auto Installer ###
 ## Comment vagrant-installer to disable instalation of the relative application
 ## Add all possible hosts to machine to avoid duplications
-sudo cat config/hosts/hosts >> /etc/hosts
+sudo cat /vagrant/config/hosts/hosts >> /etc/hosts
 
 # Comment next line to avoid last Drupal 7 installation
 . /vagrant/app/drupal/7/config/requirements.sh
@@ -60,12 +60,12 @@ sudo cat config/hosts/hosts >> /etc/hosts
 
 # Comment next line to avoid last Sonata installation
 #. /vagrant/app/symfony/sonata/config/requirements.sh
-#
-## Comment next line to avoid last Wordpress 4 installation
+
+# Comment next line to avoid last Wordpress 4 installation
 . /vagrant/app/wordpress/4/config/requirements.sh
 
 # Comment next line to avoid last Seven Manager (custom project) installation
-#. /vagrant/app/custom/seven_manager/config/requirements.sh
+. /vagrant/app/custom/seven_manager/config/requirements.sh
 
 # Restart services
 sudo /etc/init.d/apache2 restart -y
