@@ -4,6 +4,7 @@
 cd /vagrant/app/custom/seven_manager
 mkdir releases
 mv current releases/seven_manager_$(date +%F-%T)
+
 git clone https://github.com/7rin0/SevenManager.git current
 cd current
 sudo DATABASE_NAME=seven_manager DATABASE_USER=root DATABASE_PASSWORD="root" COMPOSER_PROCESS_TIMEOUT=900 composer install -n
