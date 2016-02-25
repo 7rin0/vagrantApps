@@ -59,13 +59,13 @@ sudo cat /vagrant/config/hosts/hosts >> /etc/hosts
 . /vagrant/app/symfony/3/config/requirements.sh
 
 # Comment next line to avoid last Sonata installation
-#. /vagrant/app/symfony/sonata/config/requirements.sh
+. /vagrant/app/symfony/sonata/config/requirements.sh
 
 # Comment next line to avoid last Wordpress 4 installation
 . /vagrant/app/wordpress/4/config/requirements.sh
 
 # Comment next line to avoid last Seven Manager (custom project) installation
-#. /vagrant/app/custom/seven_manager/config/requirements.sh
+. /vagrant/app/custom/seven_manager/config/requirements.sh
 
 # Restart services
 sudo /etc/init.d/apache2 restart -y
