@@ -2,10 +2,9 @@
 Install and run one or more applications automatically 
 
 ## Requirements
-Your OS must have this application installed
-- Virtualbox
-- Vagrant
-- Git
+- Virtualbox >= 4.3.36
+- Vagrant >= 1.6.5
+- Git >= 1.6
 
 ## Add to your hosts
 You may choose accordingly your needs or keep the possibility of test everything by adding the following hosts to your OS hosts file
