@@ -29,7 +29,8 @@ yum -y install httpd
 rpm -Uvh http://repo.mysql.com/yum/mysql-5.5-community/el/7/x86_64/mysql-community-release-el7-5.noarch.rpm
 yum -y install php php-pear
 yum install -y gcc php-devel php-pear
-yum -y install php-gd php-ldap php-odbc php-pear php-xml php-xmlrpc php-mbstring php-snmp php-soap curl curl-devel
+yum -y install php-gd php-ldap php-odbc php-pear php-xml php-xmlrpc php-mbstring php-snmp php-soap curl curl-devel php-mysql
+yum install mysql-server -y
 
 # Versioning, Web-accelerators, cache
 yum install git -y
@@ -42,3 +43,8 @@ chmod 775 /usr/local/bin/drush
 # ("child-machines" are being prepared)
 gem install sass
 yum install -y ImageMagick ImageMagick-devel ImageMagick-perl
+
+# Restart services
+service mysqld start
+service httpd restart
+

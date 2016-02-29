@@ -23,6 +23,7 @@
 
 # Ignore Vagrant install
 .vagrant
+html
 
 # Ignore nohup file
 nohup.out
