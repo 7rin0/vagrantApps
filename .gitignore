@@ -22,7 +22,7 @@
 *.zip
 
 # Ignore Vagrant install
-/vagrant/.vagrant
+.vagrant
 
 # Ignore nohup file
 nohup.out
