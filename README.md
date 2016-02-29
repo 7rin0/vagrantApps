@@ -6,7 +6,8 @@ Install and run one or more applications automatically
 - Vagrant >= 1.6.5
 - Git >= 1.6
 
-# Recommended (Fix Vagrant Guest issues)
+## Recommended
+### Fix some Vagrant Guest Aditions issues
 - vagrant plugin install vagrant-vbguest
 
 ## Add to your hosts
