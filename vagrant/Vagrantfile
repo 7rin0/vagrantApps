@@ -32,7 +32,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	end
 
 	# A script to init out machine's environment
-#	config.vm.provision :shell, path: "install.sh"
+	config.vm.provision :shell, path: "install.sh"
 	
 	# If machine isn't sonata
 	if ARGV[1] != "sonata"
