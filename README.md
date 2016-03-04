@@ -3,7 +3,7 @@ Install and run one or more applications automatically
 
 ## Requirements
 - Virtualbox >= 4.3.36
-- Vagrant >= 1.6.5
+- Vagrant >= 1.6.0
 - Git >= 1.6
 
 ## Recommended
