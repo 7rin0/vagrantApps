@@ -9,8 +9,8 @@ git clone https://github.com/7rin0/sandbox.git current
 sudo cp -f /vagrant/app/symfony/sonata/config/parameters.yml ~/current/app/config/parameters.yml
 sudo chmod 777 ~/current/app/config/parameters.yml
 cd current
-composer install --prefer-source -n --profile
-composer install -n --profile
+DATABASE_NAME=sonata DATABASE_USER=root DATABASE_PASSWORD=root composer install --prefer-source -n --profile
+DATABASE_NAME=sonata DATABASE_USER=root DATABASE_PASSWORD=root composer install -n --profile
 
 # Move old source to releases by date
 mkdir -p /vagrant/app/symfony/sonata/releases
