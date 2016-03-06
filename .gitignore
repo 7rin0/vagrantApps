@@ -1,21 +1,21 @@
 # Ignore project current folders
-/vagrant/app/wordpress/4/current
-/vagrant/app/drupal/7/current
-/vagrant/app/drupal/8/current
-/vagrant/app/symfony/2/current
-/vagrant/app/symfony/3/current
-/vagrant/app/symfony/sonata/current
-/vagrant/app/custom/seven_manager/current
+app/wordpress/4/current
+app/drupal/7/current
+app/drupal/8/current
+app/symfony/2/current
+app/symfony/3/current
+app/symfony/sonata/current
+app/custom/seven_manager/current
 
 # Ignore project releases folders
-/vagrant/app/wordpress/4/wordpress
-/vagrant/app/wordpress/4/releases
-/vagrant/app/drupal/7/releases
-/vagrant/app/drupal/8/releases
-/vagrant/app/symfony/2/releases
-/vagrant/app/symfony/3/releases
-/vagrant/app/symfony/sonata/releases
-/vagrant/app/custom/seven_manager/releases
+app/wordpress/4/wordpress
+app/wordpress/4/releases
+app/drupal/7/releases
+app/drupal/8/releases
+app/symfony/2/releases
+app/symfony/3/releases
+app/symfony/sonata/releases
+app/custom/seven_manager/releases
 
 # Ignore PHPStorm files
 .idea
