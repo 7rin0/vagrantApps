@@ -17,6 +17,3 @@
 
 # Comment next line to avoid last Seven Manager (custom project) installation
 #. /vagrant/app/custom/seven_manager/config/requirements.sh
-
-# Restart services
-sudo /etc/init.d/apache2 restart -y

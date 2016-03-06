@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # No interactive settings
-sudo cp -f /vagrant/config/grub /etc/default/grub
+sudo cp -f /vagrant/config/machine/grub /etc/default/grub
 sudo update-grub
 
 # Default variables to no interaction installations
@@ -42,7 +42,6 @@ sudo pecl install memcache
 echo "extension=memcache.so" | sudo tee /etc/php5/apache2/conf.d/memcache.ini
 
 ### Project Auto Installer ###
-## Comment vagrant-installer to disable instalation of the relative application
 ## Add all possible hosts to machine to avoid duplications
 sudo cat /vagrant/config/hosts/hosts >> /etc/hosts
 
