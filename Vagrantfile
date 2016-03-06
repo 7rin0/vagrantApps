@@ -24,7 +24,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	# The first argument is the path on the host to the actual folder.
 	# The second argument is the path on the guest to mount the folder.
 	# The optional third argument is a set of non-required options.
-	config.vm.synced_folder ".", "/vagrant/app", id: "vagrant-root", owner: "vagrant", group: "www-data", mount_options: ["dmode=775,fmode=775"]
+	config.vm.synced_folder ".", "/vagrant", id: "vagrant-root", owner: "vagrant", group: "www-data", mount_options: ["dmode=775,fmode=775"]
 
 	config.vm.provider "virtualbox" do |v|
   		v.memory = 1024
