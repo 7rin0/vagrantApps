@@ -1,8 +1,5 @@
 #!/bin/bash
 
-## Add all possible hosts to machine to avoid duplications
-sudo cat /vagrant/config/hosts/hosts >> /etc/hosts
-
 # Comment next line to avoid last Drupal 7 installation
 . /vagrant/app/drupal/7/config/requirements.sh
 
