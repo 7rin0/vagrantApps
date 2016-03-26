@@ -44,7 +44,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
                 		v.memory = 2048
         		end
 
-			config.vm.provision :shell, path: "config/sonata.sh"
+			config.vm.provision :shell, path: "app/symfony/sonata/config/sonata.sh"
 		end
 	end	
 
