@@ -1,6 +1,6 @@
-## centOS Installation
+## CentOS Installation
 
-If yout have some issues by running vagrant of a centOs box on your OS try/reassure the following commands:
+If, after execute vagrant up, you have some issues, related to vbguest additions, try/reassure the following commands:
 
 - vagrant up
 - vagrant provision
