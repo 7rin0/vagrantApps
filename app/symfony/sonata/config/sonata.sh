@@ -14,14 +14,14 @@ DATABASE_NAME=sonata DATABASE_USER=root DATABASE_PASSWORD=root composer install 
 
 # Move old source to releases by date
 mkdir -p /vagrant/app/symfony/sonata/releases
-mv /vagrant/app/symfony/sonata/current /vagrant/app/symfony/sonata/releases/sonata_$(date +%F-%T)
+mv /vagrant/app/symfony/sonata/current /vagrant/app/symfony/sonata/releases/sonata_"$(date +%F-%T)"
 sudo mv /home/vagrant/current /vagrant/app/symfony/sonata/
 
 # Set permissions
 cd /vagrant/app/symfony/sonata/current
 sudo chmod -R 777 /vagrant/app/symfony/sonata/current/app/cache
 sudo chmod -R 777 /vagrant/app/symfony/sonata/current/app/logs
-sudo chown -R $(whoami):www-data *
+sudo chown -R "$(whoami)":www-data *
 
 # Set configs, Create database schema and load data
 php app/console doctrine:schema:create
