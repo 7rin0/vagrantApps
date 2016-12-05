@@ -6,7 +6,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 	# Vagrant virtual environment (box)
-	config.vm.box = "ubuntu/trusty64"
+	config.vm.box = "ubuntu/xenial64"
 
 	# Update manually
 	#if File.exist?("./vagrant/.vagrant") then
@@ -15,7 +15,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 	# The url from where the 'config.vm.box' box will be fetched if it
 	# doesn't already exist on the user's system.
-	config.vm.box_url = "https://atlas.hashicorp.com/ubuntu/boxes/trusty64/versions/20160209.0.0/providers/virtualbox.box"
+	config.vm.box_url = "https://atlas.hashicorp.com/ubuntu/boxes/xenial64/versions/20161203.0.0/providers/virtualbox.box"
 
 	# Create a forwarded port mapping which allows access to a specific port
 	# config.vm.network :forwarded_port, guest: 80, host: 8080
@@ -37,10 +37,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	# The first argument is the path on the host to the actual folder.
 	# The second argument is the path on the guest to mount the folder.
 	# The optional third argument is a set of non-required options.
-	config.vm.synced_folder ".", "/vagrant", id: "vagrant-root", owner: "vagrant", group: "www-data", mount_options: ["dmode=775,fmode=775"]
+	config.vm.synced_folder "www", "/var/www/html/ixarm" #, id: "vagrant-root", owner: "vagrant", group: "www-data", mount_options: ["dmode=775,fmode=775"]
 
 	config.vm.provider "virtualbox" do |v|
-  		v.memory = 1024
+  		v.memory = 3512
   		v.cpus = 2
 	end
 
