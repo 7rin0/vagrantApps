@@ -18,15 +18,16 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
 sudo DEBIAN_FRONTEND=noninteractive apt-get install apache2 -y
 sudo sed -i -e '1 i\ ServerName localhost ' /etc/apache2/apache2.conf
 sudo DEBIAN_FRONTEND=noninteractive apt-get install mysql-server -y
-sudo apt-get install php5 -y
-sudo apt-get install php5 libapache2-mod-php5 -y
-sudo apt-get install php5-dev -y
-sudo apt-get install php5-mcrypt -y
-sudo apt-get install php5-curl -y
-sudo apt-get install php5-gd -y
-sudo apt-get install php5-cli -y
-sudo apt-get install php5-mysql -y
-sudo apt-get install pdo-mysql -y
+sudo apt-get install -y php5\
+                        libapache2-mod-php5\
+                        php5-dev\
+                        php5-mcrypt\
+                        php5-curl\
+                        php5-gd\
+                        php5-cli\
+                        php5-mysql\
+                        pdo-mysql
+
 sudo a2enmod rewrite
 sudo service apache2 restart -y
 
